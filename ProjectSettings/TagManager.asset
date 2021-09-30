@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Interactable
+  - Wall1Objects
+  - Wall2Objects
+  - Wall3Objects
+  - Wall4Objects
+  - Wall5Objects
+  - Wall6Objects
+  - Wall7Objects
+  - Wall8Objects
   layers:
   - Default
   - TransparentFX
