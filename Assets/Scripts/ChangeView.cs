@@ -7,7 +7,7 @@ public class ChangeView : MonoBehaviour, IInteractable
 {
     public static event Action<int> ObjectDisable;
 
-    [SerializeField] private string _spriteName;
+    public string _spriteName;
     [SerializeField] private GameObject[] _objectsToEnable;
 
     public void Interact(ImageDisplay currentDisplay)

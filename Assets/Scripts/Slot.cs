@@ -65,4 +65,6 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         transform.GetChild(0).GetComponent<Image>().sprite =
             Resources.Load<Sprite>("Inventory Items/empty_item");
     }
+
+
 }
