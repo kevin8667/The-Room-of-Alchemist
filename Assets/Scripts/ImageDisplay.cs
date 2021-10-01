@@ -10,10 +10,12 @@ public class ImageDisplay : MonoBehaviour
 
     public enum State 
     {
-        StudyRoom, ExperimentRoom
+        StudyRoom, ExperimentRoom, Zoom, ChangedView
     };
 
-    public State RoomState { get; set; }
+    public State CurrentState { get; set; }
+
+    public State PreviousState { get; set; }
 
     private int _currentWall;
     private int _previousWall;
@@ -23,7 +25,7 @@ public class ImageDisplay : MonoBehaviour
         get { return _currentWall; }
         set
         {
-            if (RoomState == State.StudyRoom)
+            if (CurrentState == State.StudyRoom)
             {
                 if (value == 5)
                 {
@@ -62,7 +64,8 @@ public class ImageDisplay : MonoBehaviour
     {
         _previousWall = 0;
         _currentWall = 1;
-        RoomState = State.StudyRoom;
+        CurrentState = State.StudyRoom;
+        PreviousState = CurrentState;
     }
 
     private void Update()

@@ -13,6 +13,7 @@ TagManager:
   - Wall6Objects
   - Wall7Objects
   - Wall8Objects
+  - ChangedViewObjects
   layers:
   - Default
   - TransparentFX

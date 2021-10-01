@@ -15,11 +15,15 @@ public class SceneManager : MonoBehaviour
     private void OnEnable()
     {
         ImageDisplay.ObjectSwitch += OnObejectEnable;
+        ChangeView.ObjectDisable += OnInteractDisable;
+        ButtonManager.ObjectResume += OnInteractResume;
     }
 
     private void OnDisable()
     {
         ImageDisplay.ObjectSwitch -= OnObejectEnable;
+        ChangeView.ObjectDisable -= OnInteractDisable;
+        ButtonManager.ObjectResume -= OnInteractResume;
     }
 
 
@@ -70,30 +74,85 @@ public class SceneManager : MonoBehaviour
 
     private void EnableObjects(int currentWallNumber, int previousWallNumber) 
     {
-        _gameObjects = GameObject.FindGameObjectsWithTag("Wall" + currentWallNumber.ToString()+ "Objects");
-        foreach (GameObject gameObject in _gameObjects)
-        {
-            foreach (Transform child in gameObject.transform)
-            {
-                BoxCollider2D _newcollider = child.GetComponent<BoxCollider2D>();
-                if (_newcollider != null)
-                {
-                    _newcollider.enabled = true;
-                }
-            }
-        }
         _gameObjects = GameObject.FindGameObjectsWithTag("Wall" + previousWallNumber.ToString() + "Objects");
         foreach (GameObject gameObject in _gameObjects)
         {
             foreach (Transform child in gameObject.transform)
             {
-                BoxCollider2D _newcollider = child.GetComponent<BoxCollider2D>();
-                if (_newcollider != null)
+                SpriteRenderer newSpriteRenderer = child.GetComponent<SpriteRenderer>();
+                if (newSpriteRenderer != null) 
                 {
-                    _newcollider.enabled = false;
+                    newSpriteRenderer.enabled = false;
+                }
+                BoxCollider2D newCollider = child.GetComponent<BoxCollider2D>();
+                if (newCollider != null)
+                {
+                    newCollider.enabled = false;
+                }
+            }
+        }
+        _gameObjects = GameObject.FindGameObjectsWithTag("Wall" + currentWallNumber.ToString()+ "Objects");
+        foreach (GameObject gameObject in _gameObjects)
+        {
+            foreach (Transform child in gameObject.transform)
+            {
+                SpriteRenderer newSpriteRenderer = child.GetComponent<SpriteRenderer>();
+                if (newSpriteRenderer != null)
+                {
+                    newSpriteRenderer.enabled = true;
+                }
+                BoxCollider2D newCollider = child.GetComponent<BoxCollider2D>();
+                if (newCollider != null)
+                {
+                    newCollider.enabled = true;
+                }
+            }
+        }
+        
+    }
+
+
+    private void OnInteractDisable(int currentWallNumber)
+    {
+        _gameObjects = GameObject.FindGameObjectsWithTag("Wall" + currentWallNumber.ToString() + "Objects");
+        foreach (GameObject gameObject in _gameObjects)
+        {
+            foreach (Transform child in gameObject.transform)
+            {
+                BoxCollider2D newCollider = child.GetComponent<BoxCollider2D>();
+                if (newCollider != null)
+                {
+                    newCollider.enabled = false;
                 }
             }
         }
     }
 
+    private void OnInteractResume(int currentWallNumber)
+    {
+        _gameObjects = GameObject.FindGameObjectsWithTag("ChangedViewObjects");
+        foreach (GameObject gameObject in _gameObjects)
+        {
+            foreach (Transform child in gameObject.transform)
+            {
+                BoxCollider2D newCollider = child.GetComponent<BoxCollider2D>();
+                if (newCollider != null)
+                {
+                    newCollider.enabled = false;
+                }
+            }
+        }
+        _gameObjects = GameObject.FindGameObjectsWithTag("Wall" + currentWallNumber.ToString() + "Objects");
+        foreach (GameObject gameObject in _gameObjects)
+        {
+            foreach (Transform child in gameObject.transform)
+            {
+                BoxCollider2D newCollider = child.GetComponent<BoxCollider2D>();
+                if (newCollider != null)
+                {
+                    newCollider.enabled = true;
+                }
+            }
+        }
+    }
 }

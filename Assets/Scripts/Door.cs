@@ -2,22 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour , IInteractable
+public class Door : MonoBehaviour, IInteractable
 {
     public void Interact(ImageDisplay currentDisplay)
     {
-        if (currentDisplay.RoomState == ImageDisplay.State.StudyRoom)
+        if (currentDisplay.CurrentState == ImageDisplay.State.StudyRoom)
         {
-            currentDisplay.RoomState = ImageDisplay.State.ExperimentRoom;
+            currentDisplay.CurrentState = ImageDisplay.State.ExperimentRoom;
             currentDisplay.CurrentWall = 5;
             Debug.Log("Door Hit");
         }
-        else 
+        else
         {
-            currentDisplay.RoomState = ImageDisplay.State.StudyRoom;
+            currentDisplay.CurrentState = ImageDisplay.State.StudyRoom;
             currentDisplay.CurrentWall = 2;
         }
-        
+
 
     }
 
@@ -31,6 +31,6 @@ public class Door : MonoBehaviour , IInteractable
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
