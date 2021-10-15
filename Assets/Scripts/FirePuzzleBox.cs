@@ -12,7 +12,6 @@ public class FirePuzzleBox : MonoBehaviour
 
     public string DisplayImage;
 
-    public int _usageNumber;
 
     private bool _isOpened;
 

@@ -25,7 +25,7 @@ public class ItemEffect : MonoBehaviour, IInteractable
 
     public string DisplayImage;
 
- 
+    [SerializeField] private bool _isTurnOff;
 
     public property ItemProperty;
 
@@ -51,7 +51,11 @@ public class ItemEffect : MonoBehaviour, IInteractable
             }
             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
 
-            if (_isGiveItem)
+            if (_isGiveItem && _isTurnOff)
+            {
+                ItemPickUp();
+                gameObject.SetActive(false);
+            }else if (_isGiveItem)
             {
                 ItemPickUp();
             }

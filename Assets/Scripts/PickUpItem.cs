@@ -14,6 +14,8 @@ public class PickUpItem : MonoBehaviour, IInteractable
 
     private GameObject _inventorySlots;
 
+    [SerializeField] GameObject _objectToDisable;
+
     public void Interact(ImageDisplay currentDisplay)
     {
         ItemPickUp();
@@ -34,6 +36,11 @@ public class PickUpItem : MonoBehaviour, IInteractable
             {
                 slot.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/" + _displaySprite);
                 slot.GetComponent<Slot>().AssignProperty((int)ItemProperty, DisplayImage);
+                if(_objectToDisable != null)
+                {
+                    _objectToDisable.SetActive(false);
+                }
+                    
                 Destroy(gameObject);
                 break;
             }
