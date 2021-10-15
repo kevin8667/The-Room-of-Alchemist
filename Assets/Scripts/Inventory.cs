@@ -25,11 +25,13 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         SelectSlot();
-        //HideDisplay();
+        HideDisplay();
     }
 
     private void InitializeInventory()
     {
+        _itemDisplayer = GameObject.Find("ItemDisplayer");
+        _itemDisplayer.SetActive(false);
         _slots = GameObject.Find("Slots");
         foreach(Transform slot in _slots.transform)
         {
@@ -45,7 +47,7 @@ public class Inventory : MonoBehaviour
     {
         foreach (Transform slot in _slots.transform)
         {
-            if (slot.gameObject == _currentSelectedSlot && slot.GetComponent<Slot>().ItemProperty == Slot.property.usable)
+            if (slot.gameObject == _currentSelectedSlot && slot.GetComponent<Slot>().ItemProperty == Slot.property.usable && slot.transform.GetChild(0).GetComponent<Image>().sprite.name != "EmptyItem")
             {
                 
                 slot.GetComponent<Image>().color = new Color(.9f, .4f, .6f, 1);
@@ -65,7 +67,7 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
-            //_itemDisplayer.SetActive(false);
+            _itemDisplayer.SetActive(false);
             if (_currentSelectedSlot.GetComponent<Slot>().ItemProperty == Slot.property.displayable)
             {
                 _currentSelectedSlot = _previousSelectedSlot;

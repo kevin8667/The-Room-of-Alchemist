@@ -23,27 +23,26 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         _inventory.GetComponent<Inventory>()._previousSelectedSlot = _inventory.GetComponent<Inventory>()._currentSelectedSlot;
         _inventory.GetComponent<Inventory>()._currentSelectedSlot = this.gameObject;
         //Combine();
-        /**if (ItemProperty == Slot.property.displayable) 
+        if (ItemProperty == Slot.property.displayable) 
         {
             DisplayItem(); 
-        }**/
+        }
     }
 
-    public void AssignProperty(int orderNumber, string displayImage, string combinationItem)
+    public void AssignProperty(int orderNumber, string displayImage)
     {
         ItemProperty = (property)orderNumber;
         this._displayImage = displayImage;
-        this._combinationItem = combinationItem;
     }
 
-    /**public void DisplayItem()
+    public void DisplayItem()
     {
-        _inventory.GetComponent<Inventory>().itemDisplayer.SetActive(true);
-        _inventory.GetComponent<Inventory>().itemDisplayer.GetComponent<Image>().sprite =
-            Resources.Load<Sprite>("Inventory Items/" + _displayImage);
+        _inventory.GetComponent<Inventory>()._itemDisplayer.SetActive(true);
+        _inventory.GetComponent<Inventory>()._itemDisplayer.GetComponent<Image>().sprite =
+            Resources.Load<Sprite>("Items/" + _displayImage);
     }
 
-    void Combine()
+    /**void Combine()
     {
         if (_inventory.GetComponent<Inventory>()._previousSelectedSlot.GetComponent<Slot>().combinationItem
             == this.gameObject.GetComponent<Slot>()._combinationItem && this.gameObject.GetComponent<Slot>()._combinationItem != "")

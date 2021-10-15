@@ -9,7 +9,7 @@ public class PickUpItem : MonoBehaviour, IInteractable
     public enum property { usable, displayable };
 
     public string DisplayImage;
-    public string CombinationItem;
+
 
     public property ItemProperty;
 
@@ -34,7 +34,7 @@ public class PickUpItem : MonoBehaviour, IInteractable
             if (slot.transform.GetChild(0).GetComponent<Image>().sprite.name == "EmptyItem")
             {
                 slot.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/" + _displaySprite);
-                slot.GetComponent<Slot>().AssignProperty((int)ItemProperty, DisplayImage, CombinationItem);
+                slot.GetComponent<Slot>().AssignProperty((int)ItemProperty, DisplayImage);
                 Destroy(gameObject);
                 break;
             }

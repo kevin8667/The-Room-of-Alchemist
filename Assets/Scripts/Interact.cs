@@ -22,7 +22,7 @@ public class Interact : MonoBehaviour
 
             if (_hit && _hit.transform.tag == "Interactable") 
             {
-                Debug.Log("Door Hit");
+                Debug.Log("Hit");
                 _hit.transform.GetComponent<IInteractable>().Interact(_currentDisplay);
                 
                 

@@ -48,6 +48,12 @@ public class ButtonBehavior : MonoBehaviour
             GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g, GetComponent<Image>().color.b, 0);
             GetComponent<Button>().enabled = false;
         }
+
+        if (_currentDisplay.CurrentState == ImageDisplay.State.ChangedView_2 && ThisButtonId == ButtonId.moveButton)
+        {
+            GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g, GetComponent<Image>().color.b, 0);
+            GetComponent<Button>().enabled = false;
+        }
     }
 
     private void DisplayButton()
@@ -66,6 +72,12 @@ public class ButtonBehavior : MonoBehaviour
 
 
         if (_currentDisplay.CurrentState == ImageDisplay.State.ChangedView && ThisButtonId == ButtonId.returnButton)
+        {
+            GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g, GetComponent<Image>().color.b, 1);
+            GetComponent<Button>().enabled = true;
+        }
+
+        if (_currentDisplay.CurrentState == ImageDisplay.State.ChangedView_2 && ThisButtonId == ButtonId.returnButton)
         {
             GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g, GetComponent<Image>().color.b, 1);
             GetComponent<Button>().enabled = true;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChangeableObject : MonoBehaviour , IInteractable
 {
     public string _spriteName;
+    
     [SerializeField] private GameObject[] _objectsToEnable;
 
     private string _previousSprite;
@@ -21,7 +22,7 @@ public class ChangeableObject : MonoBehaviour , IInteractable
         {
             _previousSprite = _changeView._spriteName;
             currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + _spriteName);
-            foreach (GameObject gameObject in _objectsToEnable)
+            /**foreach (GameObject gameObject in _objectsToEnable)
             {
                 gameObject.SetActive(true);
                 BoxCollider2D newCollider = gameObject.GetComponent<BoxCollider2D>();
@@ -29,7 +30,7 @@ public class ChangeableObject : MonoBehaviour , IInteractable
                 {
                     newCollider.enabled = true;
                 }
-            }
+            }**/
             _isChanged = true;
         }else if (_isSwitchable && _isChanged)
         {
@@ -37,19 +38,23 @@ public class ChangeableObject : MonoBehaviour , IInteractable
             Debug.Log(_isChanged);
             foreach (GameObject gameObject in _objectsToEnable)
             {
-                gameObject.SetActive(true);
+                gameObject.SetActive(false);
+                /**gameObject.SetActive(true);
                 BoxCollider2D newCollider = gameObject.GetComponent<BoxCollider2D>();
                 if (newCollider != null)
                 {
                     newCollider.enabled = false;
-                }
+                }**/
+
             }
-            
-        }else if (_isSwitchable == false && _isChanged == false)
+
+        }
+        else if (_isSwitchable == false && _isChanged == false)
         {
             currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + _spriteName);
             Debug.Log(_isChanged);
-            foreach (GameObject gameObject in _objectsToEnable)
+
+            /**foreach (GameObject gameObject in _objectsToEnable)
             {
                 gameObject.SetActive(true);
                 BoxCollider2D newCollider = gameObject.GetComponent<BoxCollider2D>();
@@ -57,8 +62,7 @@ public class ChangeableObject : MonoBehaviour , IInteractable
                 {
                     newCollider.enabled = true;
                 }
-            }
-
+            }**/
         }
 
 
@@ -80,4 +84,6 @@ public class ChangeableObject : MonoBehaviour , IInteractable
             _isChanged = false;
         }
     }
+
+    
 }

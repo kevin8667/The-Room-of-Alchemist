@@ -9,13 +9,28 @@ public class ItemEffect : MonoBehaviour, IInteractable
 
     [SerializeField] private string _tragetSpriteName;
 
-    [SerializeField] bool _isOtherAffected;
-
-    [SerializeField] string _affectedName;
+    [SerializeField] GameObject _affectedObject;
 
     [SerializeField] string _affectedTragetSpriteName;
 
     private GameObject _inventory;
+
+    private bool _isSolved;
+
+    [SerializeField] private bool _isGiveItem;
+
+
+    public string _displaySprite;
+    public enum property { usable, displayable };
+
+    public string DisplayImage;
+
+
+    public property ItemProperty;
+
+    private GameObject _inventorySlots;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,20 +40,36 @@ public class ItemEffect : MonoBehaviour, IInteractable
 
     public void Interact (ImageDisplay currentDisplay)
     {
-        if(_inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name == _correctItem)
+        if(_inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name == _correctItem && _isSolved == false)
         {
-            currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + _tragetSpriteName);
-            if (_isOtherAffected)
+            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + _tragetSpriteName);
+            _isSolved = true;
+            if (_affectedObject && _isSolved)
             {
-                GameObject.Find(_affectedName).GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + _affectedTragetSpriteName);
+                _affectedObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + _affectedTragetSpriteName);
+            }
+            _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
+
+            if (_isGiveItem)
+            {
+                ItemPickUp();
             }
         }
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ItemPickUp()
     {
-        
+        _inventorySlots = GameObject.Find("Slots");
+
+        foreach (Transform slot in _inventorySlots.transform)
+        {
+            if (slot.transform.GetChild(0).GetComponent<Image>().sprite.name == "EmptyItem")
+            {
+                slot.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/" + _displaySprite);
+                slot.GetComponent<Slot>().AssignProperty((int)ItemProperty, DisplayImage);
+                break;
+            }
+        }
     }
 }

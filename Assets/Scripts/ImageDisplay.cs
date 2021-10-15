@@ -7,18 +7,21 @@ public class ImageDisplay : MonoBehaviour
 {
     public static event Action<int, int> ObjectSwitch;
 
-
     public enum State 
     {
-        StudyRoom, ExperimentRoom, Zoom, ChangedView
+        StudyRoom, ExperimentRoom, Zoom, ChangedView, ChangedView_2
     };
 
     public State CurrentState { get; set; }
 
     public State PreviousState { get; set; }
 
+    public State RoomsState { get; set; }
+
     private int _currentWall;
     private int _previousWall;
+
+    public Sprite _previousSprite;
 
     public int CurrentWall 
     {
@@ -76,7 +79,20 @@ public class ImageDisplay : MonoBehaviour
             ObjectSwitch?.Invoke(_currentWall, _previousWall);
             
         }
-        
+
+        if(CurrentState == State.ChangedView)
+        {
+            _previousSprite = GetComponent<SpriteRenderer>().sprite;
+        }
+
+        if (CurrentState == State.ExperimentRoom) 
+        {
+            RoomsState = State.ExperimentRoom;
+        }else if (CurrentState == State.StudyRoom)
+        {
+            RoomsState = State.StudyRoom;
+        }
+
         _previousWall = _currentWall;
     }
 
