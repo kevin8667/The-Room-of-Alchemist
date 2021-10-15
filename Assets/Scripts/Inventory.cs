@@ -26,6 +26,22 @@ public class Inventory : MonoBehaviour
     {
         SelectSlot();
         HideDisplay();
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/FireObject");
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/WaterObject");
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EarthObject");
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/AirObject");
+        }
     }
 
     private void InitializeInventory()

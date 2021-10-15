@@ -23,6 +23,8 @@ public class ImageDisplay : MonoBehaviour
 
     public Sprite _previousSprite;
 
+    [SerializeField] private MagicCircle _magicCircle;
+
     public int CurrentWall 
     {
         get { return _currentWall; }
@@ -76,6 +78,10 @@ public class ImageDisplay : MonoBehaviour
         if(_currentWall != _previousWall)
         {
             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/wall" + _currentWall.ToString());
+            if(_magicCircle._isMagicEnabled && _currentWall == 2)
+            {
+                GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Wall2Changed");
+            }
             ObjectSwitch?.Invoke(_currentWall, _previousWall);
             
         }
