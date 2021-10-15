@@ -4,15 +4,66 @@ using UnityEngine;
 
 public class SymbolLock : MonoBehaviour
 {
+    [SerializeField] string _currectCombination;
+
+    public GameObject _lockerSprite;
+
+    [SerializeField] string _unlockedSpriteName;
+
+    public Sprite[] _symbolSprites;
+
+    public int[] _currentIndividualIndex = { 0, 0, 0 };
+
+    private bool _isOpened;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _isOpened = false;
+
+        LoadAllSymbolSprites();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+        OpenLocker();
+    }
+
+   void LoadAllSymbolSprites()
+    {
+        _symbolSprites = Resources.LoadAll<Sprite>("Sprites/Symbols");
+    }
+
+    bool VerifyCorrectCode()
+    {
+        bool correct = true;
+
+        for (int i = 0; i < 3; i++)
+        {
+            if (_currectCombination[i] != transform.GetChild(i).GetComponent<SpriteRenderer>().sprite.name.Substring(transform.GetChild(i).GetComponent<SpriteRenderer>().sprite.name.Length - 1)[0])
+            {
+                correct = false;
+            }
+        }
+
+        return correct;
+    }
+
+    void OpenLocker()
+    {
+        if (_isOpened) return;
+
+        if (VerifyCorrectCode())
+        {
+            _isOpened = true;
+            _lockerSprite.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + _unlockedSpriteName);
+
+            for (int i = 0; i < 3; i++)
+            {
+                Destroy(transform.GetChild(i).gameObject);
+            }
+        }
     }
 }

@@ -2,8 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LockerSymbol : MonoBehaviour
+public class LockerSymbol : MonoBehaviour, IInteractable
 {
+    public void Interact(ImageDisplay currentDisplay)
+    {
+        transform.parent.GetComponent<SymbolLock>()._currentIndividualIndex[transform.GetSiblingIndex()]++;
+
+        if (transform.parent.GetComponent<SymbolLock>()._currentIndividualIndex[transform.GetSiblingIndex()] > 5)
+            transform.parent.GetComponent<SymbolLock>()._currentIndividualIndex[transform.GetSiblingIndex()] = 0;
+
+        this.gameObject.GetComponent<SpriteRenderer>().sprite =
+            transform.parent.GetComponent<SymbolLock>()._symbolSprites[transform.parent.GetComponent<SymbolLock>()._currentIndividualIndex[transform.GetSiblingIndex()]];
+    }
     // Start is called before the first frame update
     void Start()
     {
