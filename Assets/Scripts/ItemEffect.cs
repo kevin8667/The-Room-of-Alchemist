@@ -21,10 +21,11 @@ public class ItemEffect : MonoBehaviour, IInteractable
 
 
     public string _displaySprite;
-    public enum property { usable, displayable };
+    public enum property { usable, displayable, reusable };
 
     public string DisplayImage;
 
+ 
 
     public property ItemProperty;
 
@@ -55,7 +56,7 @@ public class ItemEffect : MonoBehaviour, IInteractable
                 ItemPickUp();
             }
         }
-        
+
     }
 
     public void ItemPickUp()

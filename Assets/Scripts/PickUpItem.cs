@@ -10,7 +10,6 @@ public class PickUpItem : MonoBehaviour, IInteractable
 
     public string DisplayImage;
 
-
     public property ItemProperty;
 
     private GameObject _inventorySlots;

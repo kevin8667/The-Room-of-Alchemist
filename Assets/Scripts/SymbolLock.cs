@@ -16,6 +16,8 @@ public class SymbolLock : MonoBehaviour
 
     private bool _isOpened;
 
+    [SerializeField] private GameObject _objectInsideLocker;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +66,7 @@ public class SymbolLock : MonoBehaviour
             {
                 Destroy(transform.GetChild(i).gameObject);
             }
+            _objectInsideLocker.SetActive(true);
         }
     }
 }

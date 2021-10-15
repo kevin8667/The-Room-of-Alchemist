@@ -7,11 +7,12 @@ using UnityEngine.UI;
 public class Slot : MonoBehaviour, IPointerClickHandler
 {
     private GameObject _inventory;
-    public enum property { usable, displayable, empty };
+    public enum property { usable, displayable , empty };
     public property ItemProperty { get; set; }
 
     private string _displayImage;
     public string _combinationItem { get; private set; }
+
 
     void Start()
     {
@@ -33,6 +34,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     {
         ItemProperty = (property)orderNumber;
         this._displayImage = displayImage;
+
     }
 
     public void DisplayItem()
