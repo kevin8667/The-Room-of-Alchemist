@@ -18,6 +18,8 @@ public class SymbolLock : MonoBehaviour
 
     [SerializeField] private GameObject _objectInsideLocker;
 
+    [SerializeField] private GameObject _linkViewPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +69,7 @@ public class SymbolLock : MonoBehaviour
                 Destroy(transform.GetChild(i).gameObject);
             }
             _objectInsideLocker.SetActive(true);
+            _linkViewPoint.GetComponent<ChangeView>()._isLockerUnlocked = true;
         }
     }
 }

@@ -17,7 +17,9 @@ public class ChangeView : MonoBehaviour, IInteractable
 
     [SerializeField] private bool _isSecondLayer;
 
-    
+    [SerializeField] private GameObject _objectInLocker;
+
+    public bool _isLockerUnlocked;
 
 
 
@@ -34,17 +36,21 @@ public class ChangeView : MonoBehaviour, IInteractable
             LinkedViewPoint?.Invoke(_viewPointToDisable);
             LinkedViewPointDisable?.Invoke();
 
-            foreach (GameObject gameObject in _objectsToEnable)
+            if (_objectsToEnable != null)
             {
-                gameObject.SetActive(true);
-                BoxCollider2D newCollider = gameObject.GetComponent<BoxCollider2D>();
-                if (newCollider != null)
+                foreach (GameObject gameObject in _objectsToEnable)
                 {
-                    newCollider.enabled = true;
+                    gameObject.SetActive(true);
+                    BoxCollider2D newCollider = gameObject.GetComponent<BoxCollider2D>();
+                    if (newCollider != null)
+                    {
+                        newCollider.enabled = true;
+                    }
                 }
             }
 
-        }if (_isSecondLayer == false) 
+        }
+        if (_isSecondLayer == false) 
         {
             currentDisplay.PreviousState = currentDisplay.CurrentState;
             currentDisplay.CurrentState = ImageDisplay.State.ChangedView;
@@ -53,15 +59,24 @@ public class ChangeView : MonoBehaviour, IInteractable
 
             ObjectDisable?.Invoke(currentDisplay.CurrentWall);
 
-            foreach (GameObject gameObject in _objectsToEnable)
+            if(_objectsToEnable != null) 
             {
-                gameObject.SetActive(true);
-                BoxCollider2D newCollider = gameObject.GetComponent<BoxCollider2D>();
-                if (newCollider != null)
+                foreach (GameObject gameObject in _objectsToEnable)
                 {
-                    newCollider.enabled = true;
+                    gameObject.SetActive(true);
+                    BoxCollider2D newCollider = gameObject.GetComponent<BoxCollider2D>();
+                    if (newCollider != null)
+                    {
+                        newCollider.enabled = true;
+                    }
                 }
             }
+            
+        }
+
+        if (_isLockerUnlocked)
+        {
+            _objectInLocker.SetActive(true);
         }
 
         

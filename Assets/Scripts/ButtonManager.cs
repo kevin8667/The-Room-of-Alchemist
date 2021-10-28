@@ -31,7 +31,7 @@ public class ButtonManager : MonoBehaviour
 
     public void OnReturnButtonClicked()
     {
-
+        Debug.Log(_currentDisplay.GetComponent<SpriteRenderer>().sprite.name);
         if (_currentDisplay.CurrentState == ImageDisplay.State.ChangedView) 
         {
             Debug.Log(_currentDisplay.CurrentState);
