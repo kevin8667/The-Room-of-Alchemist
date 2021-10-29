@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SymbolLock : MonoBehaviour
 {
-    [SerializeField] string _currectCombination;
+    [SerializeField] string _correctCombination;
 
     public GameObject _lockerSprite;
 
@@ -46,7 +46,7 @@ public class SymbolLock : MonoBehaviour
 
         for (int i = 0; i < 3; i++)
         {
-            if (_currectCombination[i] != transform.GetChild(i).GetComponent<SpriteRenderer>().sprite.name.Substring(transform.GetChild(i).GetComponent<SpriteRenderer>().sprite.name.Length - 1)[0])
+            if (_correctCombination[i] != transform.GetChild(i).GetComponent<SpriteRenderer>().sprite.name.Substring(transform.GetChild(i).GetComponent<SpriteRenderer>().sprite.name.Length - 1)[0])
             {
                 correct = false;
             }

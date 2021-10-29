@@ -10,7 +10,7 @@ public class ButtonManager : MonoBehaviour
 
     private ImageDisplay _currentDisplay;
 
-    
+    [SerializeField] GameObject _horse1, _horse2, _horse3;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +31,10 @@ public class ButtonManager : MonoBehaviour
 
     public void OnReturnButtonClicked()
     {
+        _horse1.transform.position = new Vector3(4.9f, _horse1.transform.position.y, 0);
+        _horse2.transform.position = new Vector3(4.9f, _horse2.transform.position.y, 0);
+        _horse3.transform.position = new Vector3(4.9f, _horse3.transform.position.y, 0);
+
         Debug.Log(_currentDisplay.GetComponent<SpriteRenderer>().sprite.name);
         if (_currentDisplay.CurrentState == ImageDisplay.State.ChangedView) 
         {

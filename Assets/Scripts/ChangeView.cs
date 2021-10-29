@@ -46,6 +46,11 @@ public class ChangeView : MonoBehaviour, IInteractable
                     {
                         newCollider.enabled = true;
                     }
+                    SpriteRenderer newSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+                    if (newSpriteRenderer != null)
+                    {
+                        newSpriteRenderer.enabled = true;
+                    }
                 }
             }
 
@@ -61,6 +66,7 @@ public class ChangeView : MonoBehaviour, IInteractable
 
             if(_objectsToEnable != null) 
             {
+                
                 foreach (GameObject gameObject in _objectsToEnable)
                 {
                     gameObject.SetActive(true);
@@ -69,7 +75,13 @@ public class ChangeView : MonoBehaviour, IInteractable
                     {
                         newCollider.enabled = true;
                     }
+                    SpriteRenderer newSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+                    if (newSpriteRenderer != null)
+                    {
+                        newSpriteRenderer.enabled = true;
+                    }
                 }
+                
             }
             
         }

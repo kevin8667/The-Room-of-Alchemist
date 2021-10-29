@@ -193,6 +193,11 @@ public class SceneManager : MonoBehaviour
                 {
                     newCollider.enabled = false;
                 }
+                SpriteRenderer newSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+                if (newSpriteRenderer != null)
+                {
+                    newSpriteRenderer.enabled = false;
+                }
             }
         }
         
