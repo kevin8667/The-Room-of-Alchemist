@@ -9,6 +9,8 @@ public class MagicCircle : MonoBehaviour
 
     private int _elementalPower;
 
+    private bool _air, _fire, _earth, _water;
+
     public bool _isMagicEnabled;
 
     // Start is called before the first frame update
@@ -24,11 +26,26 @@ public class MagicCircle : MonoBehaviour
         {
             if(gameObject.GetComponent<SpriteRenderer>().sprite != null)
             {
-                _elementalPower += 1;
+                if(gameObject.GetComponent<SpriteRenderer>().sprite.name == "AirObjectTop")
+                {
+                    _air = true;
+                }
+                if (gameObject.GetComponent<SpriteRenderer>().sprite.name == "FireObjectTop")
+                {
+                    _fire = true;
+                }
+                if (gameObject.GetComponent<SpriteRenderer>().sprite.name == "EarthObjectTop")
+                {
+                    _earth = true;
+                }
+                if (gameObject.GetComponent<SpriteRenderer>().sprite.name == "WaterObjectTop")
+                {
+                    _water = true;
+                }
             }
         }
 
-        if(_elementalPower == 4)
+        if(_air && _fire && _earth && _water)
         {
             _isMagicEnabled = true;
             _escape.SetActive(true);
