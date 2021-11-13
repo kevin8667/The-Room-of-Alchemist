@@ -83,14 +83,14 @@ public class CodeLock : MonoBehaviour
 
             if (_isFourChar)
             {
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 12; i++)
                 {
                     transform.GetChild(i).gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 }
             }
             else
             {
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 9; i++)
                 {
                     transform.GetChild(i).gameObject.GetComponent<BoxCollider2D>().enabled = false;
                     Debug.Log("Open");

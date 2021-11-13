@@ -20,6 +20,9 @@ public class SpriteMover : MonoBehaviour, IInteractable
     private void OnEnable()
     {
         _thisMovement = 0;
+        _thisPosition = transform.position;
+        _newTransform_1_X = _otherObj_1.gameObject.transform.position.x;
+        _newTransform_2_X = _otherObj_2.gameObject.transform.position.x;
     }
 
     private void Awake()
@@ -31,6 +34,8 @@ public class SpriteMover : MonoBehaviour, IInteractable
         
     }
 
+    
+
     private void Update()
     {
         _newTransform_1_X = _otherObj_1.gameObject.transform.position.x;
@@ -40,6 +45,7 @@ public class SpriteMover : MonoBehaviour, IInteractable
     public void Interact(ImageDisplay currentDisplay)
     {
         Debug.Log((float)transform.position.x);
+        Debug.Log(_thisPosition);
         Move();
     }
 

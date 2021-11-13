@@ -23,8 +23,7 @@ public class Escape : MonoBehaviour,IInteractable
     {
         if (_magicCircle._isMagicEnabled)
         {
-            _text.SetActive(true);
-            _text.GetComponent<Text>().text = "YOU ESCAPED!!";
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Ending");
         }
 
     }

@@ -53,6 +53,7 @@ public class BeakerStand : MonoBehaviour, IInteractable
                 {
                     case "BeakerEmpty":
                         GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_Empty");
+                        GameObject.Find("BeakerStand_FarView").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_Empty");
                         _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                         _isBeakerOn = true;
                         break;
@@ -60,24 +61,28 @@ public class BeakerStand : MonoBehaviour, IInteractable
                         if(_r == 0 && _g == 0 && _b ==0 && _isBeakerOn) 
                         {
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_R");
+                            GameObject.Find("BeakerStand_FarView").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_R");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                             _r += 1;
                         }
                         else if (_r == 0 && _g == 1 && _b == 0 && _isBeakerOn)
                         {
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_RG");
+                            GameObject.Find("BeakerStand_FarView").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_RG");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                             _r += 1;
                         }
                         else if (_r == 0 && _g == 0 && _b == 1 && _isBeakerOn)
                         {
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_RB");
+                            GameObject.Find("BeakerStand_FarView").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_RB");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                             _r += 1;
                         }
                         else if (_r == 0 && _g == 1 && _b == 1 && _isBeakerOn)
                         {
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_RGB");
+                            GameObject.Find("BeakerStand_FarView").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_RGB");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                             _r += 1;
                             _isSolved = true;
@@ -87,24 +92,28 @@ public class BeakerStand : MonoBehaviour, IInteractable
                         if (_r == 0 && _g == 0 && _b == 0 && _isBeakerOn)
                         {
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_B");
+                            GameObject.Find("BeakerStand_FarView").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_B");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                             _b += 1;
                         }
                         else if (_r == 0 && _g == 1 && _b == 0 && _isBeakerOn)
                         {
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_BG");
+                            GameObject.Find("BeakerStand_FarView").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_BG");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                             _b += 1;
                         }
                         else if (_r == 1 && _g == 0 && _b == 0 && _isBeakerOn)
                         {
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_RB");
+                            GameObject.Find("BeakerStand_FarView").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_RB");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                             _b += 1;
                         }
                         else if (_r == 1 && _g == 1 && _b == 0 && _isBeakerOn)
                         {
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_RGB");
+                            GameObject.Find("BeakerStand_FarView").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_RGB");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                             _b += 1;
                             _isSolved = true;
@@ -114,24 +123,28 @@ public class BeakerStand : MonoBehaviour, IInteractable
                         if (_r == 0 && _g == 0 && _b == 0 && _isBeakerOn)
                         {
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_G");
+                            GameObject.Find("BeakerStand_FarView").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_G");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                             _g += 1;
                         }
                         else if (_r == 0 && _g == 0 && _b == 1 && _isBeakerOn)
                         {
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_BG");
+                            GameObject.Find("BeakerStand_FarView").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_BG");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                             _g += 1;
                         }
                         else if (_r == 1 && _g == 0 && _b == 0 && _isBeakerOn)
                         {
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_RG");
+                            GameObject.Find("BeakerStand_FarView").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_RG");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                             _g += 1;
                         }
                         else if (_r == 1 && _g == 0 && _b == 1 && _isBeakerOn)
                         {
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_RGB");
+                            GameObject.Find("BeakerStand_FarView").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand_RGB");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                             _g += 1;
                             _isSolved = true;
@@ -146,6 +159,8 @@ public class BeakerStand : MonoBehaviour, IInteractable
         {
             ItemPickUp();
             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand");
+            GameObject.Find("BeakerStand_FarView").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/BeakerStand" +
+                "");
             _isGiveItem = false;
         }
 
