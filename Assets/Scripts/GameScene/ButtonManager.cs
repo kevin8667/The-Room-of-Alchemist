@@ -12,6 +12,8 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField] GameObject _horse1, _horse2, _horse3;
 
+    [SerializeField] private GameObject _blackLock;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,8 +60,10 @@ public class ButtonManager : MonoBehaviour
             {
                 foreach (Transform child in gameObject.transform)
                 {
-
+                    
                     child.gameObject.SetActive(false);
+                    
+                    
                 }
             }
             Debug.Log(_currentDisplay.CurrentState);
@@ -92,8 +96,11 @@ public class ButtonManager : MonoBehaviour
             {
                 foreach (Transform child in gameObject.transform)
                 {
-
-                    child.gameObject.SetActive(false);
+                    if(child.name != "BlackLock")
+                    {
+                        child.gameObject.SetActive(false);
+                    }
+                    
                 }
             }
         }

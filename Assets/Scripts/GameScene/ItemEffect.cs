@@ -19,6 +19,10 @@ public class ItemEffect : MonoBehaviour, IInteractable
 
     [SerializeField] private bool _isGiveItem;
 
+    [SerializeField] AudioClip _SFXBeforeSolving;
+
+    [SerializeField] AudioClip _solvingSFX;
+
 
     public string _displaySprite;
     public enum property { usable, displayable, reusable };
@@ -31,12 +35,15 @@ public class ItemEffect : MonoBehaviour, IInteractable
 
     private GameObject _inventorySlots;
 
+    GameSceneManager _gameSceneManager;
 
+    [SerializeField] string _dialog;
 
     // Start is called before the first frame update
     void Start()
     {
         _inventory = GameObject.Find("Inventory");
+        _gameSceneManager = GameObject.Find("GameSceneManager").GetComponent<GameSceneManager>();
     }
 
     public void Interact (ImageDisplay currentDisplay)
@@ -58,6 +65,19 @@ public class ItemEffect : MonoBehaviour, IInteractable
             }else if (_isGiveItem)
             {
                 ItemPickUp();
+            }
+
+            if (_solvingSFX != null)
+            {
+                AudioHelper.PlayClip2D(_solvingSFX, 1f);
+            }
+        }
+        else if(_inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name != _correctItem && _isSolved == false)
+        {
+            _gameSceneManager.DisplayDialog(_dialog);
+            if (_SFXBeforeSolving != null)
+            {
+                AudioHelper.PlayClip2D(_SFXBeforeSolving, 1f);
             }
         }
 

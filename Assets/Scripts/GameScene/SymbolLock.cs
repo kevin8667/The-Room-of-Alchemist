@@ -20,6 +20,14 @@ public class SymbolLock : MonoBehaviour
 
     [SerializeField] private GameObject _linkViewPoint;
 
+    [SerializeField] AudioClip _solvingSFX;
+
+    [SerializeField] string _spriteName;
+
+    [SerializeField] int _numbers;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,14 +45,14 @@ public class SymbolLock : MonoBehaviour
 
    void LoadAllSymbolSprites()
     {
-        _symbolSprites = Resources.LoadAll<Sprite>("Sprites/Symbols");
+        _symbolSprites = Resources.LoadAll<Sprite>("Sprites/" + _spriteName);
     }
 
     bool VerifyCorrectCode()
     {
         bool correct = true;
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < _numbers-1; i++)
         {
             if (_correctCombination[i] != transform.GetChild(i).GetComponent<SpriteRenderer>().sprite.name.Substring(transform.GetChild(i).GetComponent<SpriteRenderer>().sprite.name.Length - 1)[0])
             {
@@ -62,9 +70,15 @@ public class SymbolLock : MonoBehaviour
         if (VerifyCorrectCode())
         {
             _isOpened = true;
+
+            if (_solvingSFX != null)
+            {
+                AudioHelper.PlayClip2D(_solvingSFX, 1f);
+            }
+
             _lockerSprite.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + _unlockedSpriteName);
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < _numbers - 1; i++)
             {
                 Destroy(transform.GetChild(i).gameObject);
             }

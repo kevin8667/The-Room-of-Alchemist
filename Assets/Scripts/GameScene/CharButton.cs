@@ -14,6 +14,8 @@ public class CharButton : MonoBehaviour, IInteractable
     [SerializeField] GameObject _codeChar;
     [SerializeField] ButtonType _buttonType;
 
+    [SerializeField] AudioClip _buttonSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +30,21 @@ public class CharButton : MonoBehaviour, IInteractable
             if(_buttonType == ButtonType.Plus)
             {
                 _codeChar.GetComponent<LockerCode>().AddNumber4();
+
+                if (_buttonSFX != null)
+                {
+                    AudioHelper.PlayClip2D(_buttonSFX, 1f);
+                }
                 //transform.parent.GetComponent<CodeLock>()._currentIndividualIndex2[transform.GetSiblingIndex()]++;
             }
             else
             {
                 _codeChar.GetComponent<LockerCode>().SubNumber4();
+
+                if (_buttonSFX != null)
+                {
+                    AudioHelper.PlayClip2D(_buttonSFX, 1f);
+                }
                 //transform.parent.GetComponent<CodeLock>()._currentIndividualIndex2[transform.GetSiblingIndex()]--;
             }
 
@@ -57,11 +69,21 @@ public class CharButton : MonoBehaviour, IInteractable
             if (_buttonType == ButtonType.Plus)
             {
                 _codeChar.GetComponent<LockerCode>().AddNumber3();
+
+                if (_buttonSFX != null)
+                {
+                    AudioHelper.PlayClip2D(_buttonSFX, 1f);
+                }
                 //transform.parent.GetComponent<CodeLock>()._currentIndividualIndex[transform.GetSiblingIndex()]++;
             }
             else
             {
                 _codeChar.GetComponent<LockerCode>().SubNumber3();
+
+                if (_buttonSFX != null)
+                {
+                    AudioHelper.PlayClip2D(_buttonSFX, 1f);
+                }
                 //transform.parent.GetComponent<CodeLock>()._currentIndividualIndex[transform.GetSiblingIndex()]--;
             }
 

@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class LockerSymbol : MonoBehaviour, IInteractable
 {
+    [SerializeField] AudioClip _buttonSFX;
+
+    [SerializeField] int _eachNumber;
+
     public void Interact(ImageDisplay currentDisplay)
     {
+        if (_buttonSFX != null)
+        {
+            AudioHelper.PlayClip2D(_buttonSFX, 1f);
+        }
+
         transform.parent.GetComponent<SymbolLock>()._currentIndividualIndex[transform.GetSiblingIndex()]++;
 
-        if (transform.parent.GetComponent<SymbolLock>()._currentIndividualIndex[transform.GetSiblingIndex()] > 5)
+        if (transform.parent.GetComponent<SymbolLock>()._currentIndividualIndex[transform.GetSiblingIndex()] > _eachNumber-1)
             transform.parent.GetComponent<SymbolLock>()._currentIndividualIndex[transform.GetSiblingIndex()] = 0;
 
         this.gameObject.GetComponent<SpriteRenderer>().sprite =

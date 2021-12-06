@@ -23,6 +23,9 @@ public class SceneManager : MonoBehaviour
         ChangeView.LinkedViewPoint += OnViewPointLinked;
         ChangeView.LinkedViewPointDisable += OnViewPointLinkedDisable;
         ButtonManager.LinkedViewPointEnable += OnViewPointLinkedEnable;
+        FakeDoor.ObjectDisable += OnInteractDisable;
+        FakeDoor.LinkedViewPoint += OnViewPointLinked;
+        FakeDoor.LinkedViewPointDisable += OnViewPointLinkedDisable;
     }
 
     private void OnDisable()
@@ -33,6 +36,10 @@ public class SceneManager : MonoBehaviour
         ChangeView.LinkedViewPoint += OnViewPointLinked;
         ChangeView.LinkedViewPointDisable += OnViewPointLinkedDisable;
         ButtonManager.LinkedViewPointEnable += OnViewPointLinkedEnable;
+        FakeDoor.ObjectDisable -= OnInteractDisable;
+        FakeDoor.LinkedViewPoint -= OnViewPointLinked;
+        FakeDoor.LinkedViewPointDisable -= OnViewPointLinkedDisable;
+
     }
 
 

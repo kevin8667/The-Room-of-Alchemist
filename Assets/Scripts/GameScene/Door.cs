@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
+    [SerializeField] AudioClip _doorSFX;
+
     public void Interact(ImageDisplay currentDisplay)
     {
+        if (_doorSFX != null)
+        {
+            AudioHelper.PlayClip2D(_doorSFX, 1f);
+        }
         if (currentDisplay.CurrentState == ImageDisplay.State.StudyRoom)
         {
             currentDisplay.CurrentState = ImageDisplay.State.ExperimentRoom;

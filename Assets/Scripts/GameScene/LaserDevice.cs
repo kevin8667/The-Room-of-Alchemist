@@ -19,10 +19,15 @@ public class LaserDevice : MonoBehaviour, IInteractable
 
     private bool _isSolved;
 
+    GameSceneManager _gameSceneManager;
+
+    [SerializeField] string _dialog;
+
     // Start is called before the first frame update
     void Start()
     {
         _inventory = GameObject.Find("Inventory");
+        _gameSceneManager = GameObject.Find("GameSceneManager").GetComponent<GameSceneManager>();
     }
 
     public void Interact(ImageDisplay currentDisplay)
@@ -42,6 +47,10 @@ public class LaserDevice : MonoBehaviour, IInteractable
                 gameObject.gameObject.SetActive(true);
             }
 
+        }
+        else
+        {
+            _gameSceneManager.DisplayDialog(_dialog);
         }
         
     }

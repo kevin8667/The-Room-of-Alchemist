@@ -17,6 +17,8 @@ public class SpriteMover : MonoBehaviour, IInteractable
     public int _thisMovement;
     public int _thisMovementAdd, _otherObjMovement1Add, _otherObjMovement2Add;
 
+    [SerializeField] AudioClip _movingSFX;
+
     private void OnEnable()
     {
         _thisMovement = 0;
@@ -53,7 +55,10 @@ public class SpriteMover : MonoBehaviour, IInteractable
     {
         if (_newTransform_1_X > -3.3 && _newTransform_2_X > -3.3 && _thisPosition.x > -3.3 && _horseBox._isUnlocked == false) 
         {
-            
+            if (_movingSFX != null)
+            {
+                AudioHelper.PlayClip2D(_movingSFX, 1f);
+            }
             _thisPosition = transform.position;
 
             _thisPosition.x += _xMovement;

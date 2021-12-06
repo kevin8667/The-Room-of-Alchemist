@@ -11,22 +11,25 @@ public class Inventory : MonoBehaviour
 
     public GameObject _itemDisplayer { get; private set; }
 
-    private GameObject _slots;
+    public GameObject _slots;
 
+    [SerializeField] GameObject _itemText;
 
 
     // Start is called before the first frame update
     void Start()
     {
         InitializeInventory();
+        _itemText.GetComponent<Text>().text = " ";
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         SelectSlot();
         HideDisplay();
-        if (Input.GetKeyDown(KeyCode.Q))
+        /**if (Input.GetKeyDown(KeyCode.Q))
         {
             GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/FireObject");
         }
@@ -41,6 +44,18 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/AirObject");
+        }**/
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/Air Liquid");
+        }
+        if(_currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name == "EmptyItem")
+        {
+            _itemText.SetActive(false);
+        }
+        else
+        {
+            _itemText.SetActive(true);
         }
     }
 
@@ -55,7 +70,6 @@ public class Inventory : MonoBehaviour
             slot.GetComponent<Slot>().ItemProperty = Slot.property.empty;
         }
         _currentSelectedSlot = GameObject.Find("Slot");
-        Debug.Log(_currentSelectedSlot);
         _previousSelectedSlot = _currentSelectedSlot;
     }
 
@@ -63,10 +77,14 @@ public class Inventory : MonoBehaviour
     {
         foreach (Transform slot in _slots.transform)
         {
-            if (slot.gameObject == _currentSelectedSlot && slot.GetComponent<Slot>().ItemProperty == Slot.property.usable && slot.transform.GetChild(0).GetComponent<Image>().sprite.name != "EmptyItem")
+            if (slot.gameObject == _currentSelectedSlot && (slot.GetComponent<Slot>().ItemProperty == Slot.property.usable || slot.GetComponent<Slot>().ItemProperty == Slot.property.displayable) && slot.transform.GetChild(0).GetComponent<Image>().sprite.name != "EmptyItem")
             {
                 
+
                 slot.GetComponent<Image>().color = new Color(.9f, .4f, .6f, 1);
+                _itemText.GetComponent<Text>().text = _currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name;
+                
+
             }
             else if (slot.gameObject == _currentSelectedSlot && slot.GetComponent<Slot>().ItemProperty == Slot.property.displayable)
             {

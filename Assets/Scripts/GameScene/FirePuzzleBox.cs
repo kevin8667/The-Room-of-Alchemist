@@ -19,6 +19,8 @@ public class FirePuzzleBox : MonoBehaviour
 
     private GameObject _inventorySlots;
 
+    [SerializeField] AudioClip _solvingSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,10 @@ public class FirePuzzleBox : MonoBehaviour
     {
         if (_laserLight._isWhiteLight && _isOpened == false)
         {
+            if (_solvingSFX != null)
+            {
+                AudioHelper.PlayClip2D(_solvingSFX, 1f);
+            }
             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + "FirePuzzleBoxUnlocked");
             ItemPickUp();
             _isOpened = true;

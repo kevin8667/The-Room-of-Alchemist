@@ -5,8 +5,12 @@ using UnityEngine;
 public class ButtonSwitch : MonoBehaviour, IInteractable
 {
     public bool _isChanged;
+    
     private GameObject[] _buttonList;
+    
     [SerializeField] private int _affectedButton_1, _affectedButton_2, _affectedButton_3, _affectedButton_4;
+
+    [SerializeField] AudioClip _buttonSFX;
 
 
     // Start is called before the first frame update
@@ -23,7 +27,10 @@ public class ButtonSwitch : MonoBehaviour, IInteractable
     }
     public void Interact(ImageDisplay currentDisplay)
     {
-
+        if(_buttonSFX != null)
+        {
+            AudioHelper.PlayClip2D(_buttonSFX,1f);
+        }
         SwicthColor();
     }
 

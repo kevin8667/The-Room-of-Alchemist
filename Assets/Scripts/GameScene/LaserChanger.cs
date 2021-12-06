@@ -38,18 +38,21 @@ public class LaserChanger : MonoBehaviour
             {
                 _laser2.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + "LaserBeam_O");
             }
+            else if (_lens1._currentLens == 2 && _lens2._currentLens == 1)
+            {
+                _laser2.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + "LaserBeam_M");
+            }
             else if (_lens1._currentLens == 1 && _lens2._currentLens == 2)
             {
                 _laser2.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + "LaserBeam_Y");
-            }
-            else if (_lens1._currentLens == 2 && _lens2._currentLens == 1)
-            {
-                _laser2.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + "LaserBeam_W");
-                _isWhiteLight = true;
+                
+                
             }
             else if (_lens1._currentLens == 2 && _lens2._currentLens == 2)
             {
-                _laser2.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + "LaserBeam_M");
+                _laser2.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + "LaserBeam_W");
+               
+                _isWhiteLight = true;
             }
         }
         

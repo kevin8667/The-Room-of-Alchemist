@@ -1,24 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameSceneManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+    [SerializeField] GameObject _dialog;
+
+    GameObject _newdialog;
+
+    
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("escape"))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
         }
-        if (Input.GetKeyDown("backspace"))
+        if (Input.GetKeyDown(KeyCode.Backspace))
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
         }
@@ -28,4 +31,38 @@ public class GameSceneManager : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(_sceneName);
     }
+
+    public void LoadTitle()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
+    }
+
+    public void Pause(GameObject pausemenu)
+    {
+        pausemenu.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void Resume(GameObject pausemenu)
+    {
+        pausemenu.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+
+    public void DisplayDialog(string dialog)
+    {
+        if(GameObject.Find("Dialog(Clone)") == null)
+        {
+            _newdialog = Instantiate(_dialog, new Vector3(4.5f, -4.5f, 0), Quaternion.identity);
+            if (_newdialog)
+            {
+                _newdialog.GetComponent<TextMeshPro>().text = dialog;
+                Destroy(_newdialog, 2f);
+            }
+        }
+       
+    }
+   
+
 }

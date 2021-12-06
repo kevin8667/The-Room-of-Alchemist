@@ -22,13 +22,15 @@ public class AirPuzzle : MonoBehaviour, IInteractable
 
     public string DisplayImage;
 
-
+    [SerializeField] AudioClip _solvingSFX, _powerSFX, _LiquidSFX;
 
     public property ItemProperty;
 
     private GameObject _inventorySlots;
 
+    GameSceneManager _gameSceneManager;
 
+    [SerializeField] string _dialog;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +39,7 @@ public class AirPuzzle : MonoBehaviour, IInteractable
         _isMineralAdded = false;
         _isLiquidAdded = false;
         _isSolved = false;
-
+        _gameSceneManager = GameObject.Find("GameSceneManager").GetComponent<GameSceneManager>();
     }
 
     public void Interact(ImageDisplay currentDisplay)
@@ -48,9 +50,13 @@ public class AirPuzzle : MonoBehaviour, IInteractable
             {
                 switch (_inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name)
                 {
-                    case "AirLiquid":
+                    case "Air Liquid":
                         if (_isLiquidAdded == false && _isMineralAdded == false)
                         {
+                            if (_LiquidSFX != null)
+                            {
+                                AudioHelper.PlayClip2D(_LiquidSFX, 1f);
+                            }
                             _isLiquidAdded = true;
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/AirPuzzleBoxWithLiquid");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
@@ -59,15 +65,23 @@ public class AirPuzzle : MonoBehaviour, IInteractable
                         else if(_isLiquidAdded == false && _isMineralAdded == true)
                         {
                             _isLiquidAdded = true;
+                            if (_solvingSFX != null)
+                            {
+                                AudioHelper.PlayClip2D(_solvingSFX, 1f);
+                            }
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/AirPuzzleBoxUnlocked");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                             _isSolved = true;
                         }
                     
                         break;
-                    case "AirMineral":
+                    case "Air Mineral":
                         if (_isLiquidAdded == false && _isMineralAdded == false)
                         {
+                            if (_powerSFX != null)
+                            {
+                                AudioHelper.PlayClip2D(_powerSFX, 1f);
+                            }
                             _isMineralAdded = true;
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/AirPuzzleBoxWithMineral");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
@@ -76,6 +90,10 @@ public class AirPuzzle : MonoBehaviour, IInteractable
                         else if (_isLiquidAdded == true && _isMineralAdded == false)
                         {
                             _isMineralAdded = true;
+                            if (_solvingSFX != null)
+                            {
+                                AudioHelper.PlayClip2D(_solvingSFX, 1f);
+                            }
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/AirPuzzleBoxUnlocked");
                             _inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/EmptyItem");
                             _isSolved = true;
@@ -90,6 +108,10 @@ public class AirPuzzle : MonoBehaviour, IInteractable
         {
             ItemPickUp();
             _isGiveItem = false;
+        }
+        else
+        {
+            _gameSceneManager.DisplayDialog(_dialog);
         }
 
     }

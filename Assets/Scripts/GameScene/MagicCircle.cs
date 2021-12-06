@@ -5,18 +5,19 @@ using UnityEngine;
 public class MagicCircle : MonoBehaviour
 {
     [SerializeField] GameObject[] _elementalSlots;
-    [SerializeField] GameObject _escape;
 
-    private int _elementalPower;
+    [SerializeField] GameObject _escape;
 
     private bool _air, _fire, _earth, _water;
 
     public bool _isMagicEnabled;
 
+    [SerializeField] AudioClip _doorSFX;
+
     // Start is called before the first frame update
     void Start()
     {
-        _elementalPower = 0;
+        _isMagicEnabled = false;
     }
 
     // Update is called once per frame
@@ -45,8 +46,12 @@ public class MagicCircle : MonoBehaviour
             }
         }
 
-        if(_air && _fire && _earth && _water)
+        if(_air && _fire && _earth && _water && _isMagicEnabled == false)
         {
+            if (_doorSFX != null)
+            {
+                AudioHelper.PlayClip2D(_doorSFX, 1f);
+            }
             _isMagicEnabled = true;
             _escape.SetActive(true);
         }
