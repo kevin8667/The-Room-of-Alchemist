@@ -44,12 +44,12 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/AirObject");
-        }**/
+        }
         if (Input.GetKeyDown(KeyCode.O))
         {
             GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Items/Air Liquid");
-        }
-        if(_currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name == "EmptyItem")
+        }**/
+        if (_currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name == "EmptyItem")
         {
             _itemText.SetActive(false);
         }

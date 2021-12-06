@@ -14,10 +14,18 @@ public class MagicCircle : MonoBehaviour
 
     [SerializeField] AudioClip _doorSFX;
 
+
+    GameSceneManager _gameSceneManager;
+
+    [SerializeField] string _dialog;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         _isMagicEnabled = false;
+        _gameSceneManager = GameObject.Find("GameSceneManager").GetComponent<GameSceneManager>();
     }
 
     // Update is called once per frame
@@ -52,6 +60,9 @@ public class MagicCircle : MonoBehaviour
             {
                 AudioHelper.PlayClip2D(_doorSFX, 1f);
             }
+
+            _gameSceneManager.DisplayDialog(_dialog);
+
             _isMagicEnabled = true;
             _escape.SetActive(true);
         }

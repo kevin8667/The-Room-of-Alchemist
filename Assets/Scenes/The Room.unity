@@ -9168,6 +9168,7 @@ MonoBehaviour:
   _escape: {fileID: 1940594989}
   _isMagicEnabled: 0
   _doorSFX: {fileID: 8300000, guid: 581a2fe1522ea864b8cb18008e43773a, type: 3}
+  _dialog: Somthing moved!
 --- !u!4 &1022866855
 Transform:
   m_ObjectHideFlags: 0

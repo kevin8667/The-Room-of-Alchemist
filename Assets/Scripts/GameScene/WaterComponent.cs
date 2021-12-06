@@ -53,7 +53,7 @@ public class WaterComponent : MonoBehaviour, IInteractable
         }
         else if (_inventory.GetComponent<Inventory>()._currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name != _correctItem && _isSolved == false)
         {
-            
+            _gameSceneManager.DisplayDialog(_dialog);
         }
         else if (_isGiveItem && _isSolved)
         {
