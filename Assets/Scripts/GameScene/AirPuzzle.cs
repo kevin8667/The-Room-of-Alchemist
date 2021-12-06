@@ -109,7 +109,7 @@ public class AirPuzzle : MonoBehaviour, IInteractable
             ItemPickUp();
             _isGiveItem = false;
         }
-        else
+        else if (_isSolved == false)
         {
             _gameSceneManager.DisplayDialog(_dialog);
         }
