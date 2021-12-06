@@ -48,7 +48,7 @@ public class LaserDevice : MonoBehaviour, IInteractable
             }
 
         }
-        else
+        else if(_isSolved == false)
         {
             _gameSceneManager.DisplayDialog(_dialog);
         }
