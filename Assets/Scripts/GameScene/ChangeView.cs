@@ -40,17 +40,21 @@ public class ChangeView : MonoBehaviour, IInteractable
             {
                 foreach (GameObject gameObject in _objectsToEnable)
                 {
-                    gameObject.SetActive(true);
-                    BoxCollider2D newCollider = gameObject.GetComponent<BoxCollider2D>();
-                    if (newCollider != null)
+                    if(gameObject != null)
                     {
-                        newCollider.enabled = true;
+                        gameObject.SetActive(true);
+                        BoxCollider2D newCollider = gameObject.GetComponent<BoxCollider2D>();
+                        if (newCollider != null)
+                        {
+                            newCollider.enabled = true;
+                        }
+                        SpriteRenderer newSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+                        if (newSpriteRenderer != null)
+                        {
+                            newSpriteRenderer.enabled = true;
+                        }
                     }
-                    SpriteRenderer newSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-                    if (newSpriteRenderer != null)
-                    {
-                        newSpriteRenderer.enabled = true;
-                    }
+                   
                 }
             }
 
@@ -88,7 +92,11 @@ public class ChangeView : MonoBehaviour, IInteractable
 
         if (_isLockerUnlocked)
         {
-            _objectInLocker.SetActive(true);
+            if(_objectInLocker != null)
+            {
+                _objectInLocker.SetActive(true);
+            }
+            
         }
 
         

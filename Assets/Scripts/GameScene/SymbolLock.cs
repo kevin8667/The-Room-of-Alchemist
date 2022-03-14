@@ -82,7 +82,11 @@ public class SymbolLock : MonoBehaviour
             {
                 Destroy(transform.GetChild(i).gameObject);
             }
-            _objectInsideLocker.SetActive(true);
+            if(_objectInsideLocker != null)
+            {
+                _objectInsideLocker.SetActive(true);
+            }
+            
             _linkViewPoint.GetComponent<ChangeView>()._isLockerUnlocked = true;
         }
     }
