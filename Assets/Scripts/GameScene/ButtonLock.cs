@@ -56,6 +56,7 @@ public class ButtonLock : MonoBehaviour
         
     }
 
+    // Not the behavior I intended but it works(DON'T TOUCH!!)
     void CheckSwitch()
     {
         _nonSwitchedButton = 0;

@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 20596560}
   - component: {fileID: 20596559}
   m_Layer: 0
-  m_Name: Button (6)
+  m_Name: Button7
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonSFX: {fileID: 8300000, guid: d956a20476abf9a40a628afa5a561e54, type: 3}
-  _eachNumber: 6
+  _symbolNumber: 6
 --- !u!212 &60533607
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 104821931}
   - component: {fileID: 104821930}
   m_Layer: 0
-  m_Name: Button (7)
+  m_Name: Button8
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1233,7 +1233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _displaySprite: Chisel
-  DisplayImage: Chisel
+  DisplayImage: 
   ItemProperty: 0
   _objectToDisable: {fileID: 0}
 --- !u!61 &168390602
@@ -1340,7 +1340,7 @@ GameObject:
   - component: {fileID: 175162987}
   - component: {fileID: 175162986}
   m_Layer: 0
-  m_Name: Button (1)
+  m_Name: Button2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1543,7 +1543,7 @@ GameObject:
   - component: {fileID: 200468376}
   - component: {fileID: 200468378}
   m_Layer: 0
-  m_Name: CharButton (3)
+  m_Name: CharButton1_2_Minus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1974,7 +1974,7 @@ MonoBehaviour:
   _linkViewPoint: {fileID: 144142616}
   _solvingSFX: {fileID: 8300000, guid: 82d6d1df214bf3c409e149eecb00c97e, type: 3}
   _spriteName: Symbols
-  _numbers: 4
+  _numbers: 3
 --- !u!1 &235925344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,10 +1985,9 @@ GameObject:
   m_Component:
   - component: {fileID: 235925345}
   - component: {fileID: 235925348}
-  - component: {fileID: 235925347}
   - component: {fileID: 235925346}
   m_Layer: 0
-  m_Name: Code1 (3)
+  m_Name: Code2_1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2059,32 +2058,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &235925347
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235925344}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.00000047683716, y: -0.00000020861626}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 1.21}
-    newSize: {x: 1.35, y: 1.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3658044, y: 1.365804}
-  m_EdgeRadius: 0
 --- !u!114 &235925348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2110,7 +2083,7 @@ GameObject:
   - component: {fileID: 275205628}
   - component: {fileID: 275205627}
   m_Layer: 0
-  m_Name: CharButton (8)
+  m_Name: CharButton2_2_Plus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2361,7 +2334,7 @@ GameObject:
   - component: {fileID: 288604639}
   - component: {fileID: 288604640}
   m_Layer: 0
-  m_Name: LaserDeviceClosed
+  m_Name: LaserDevice
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2758,7 +2731,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 23d4bfdd031e3c74b85065ebf7a60083, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d9c36d395bcedf4eb1320b7b4dc223e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2808,8 +2781,8 @@ GameObject:
   - component: {fileID: 334992744}
   - component: {fileID: 334992745}
   m_Layer: 0
-  m_Name: BlackKey_Far
-  m_TagString: Wall1Objects
+  m_Name: BlackLockFar
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2892,7 +2865,7 @@ GameObject:
   - component: {fileID: 338409315}
   - component: {fileID: 338409314}
   m_Layer: 0
-  m_Name: CharButton (19)
+  m_Name: CharButton3_4_Minus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3017,7 +2990,7 @@ GameObject:
   - component: {fileID: 351881816}
   - component: {fileID: 351881815}
   m_Layer: 0
-  m_Name: Button (3)
+  m_Name: Button4
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3208,9 +3181,9 @@ MonoBehaviour:
   - Air Mineral
   _isGiveItem: 1
   _displaySprite: Air Object
-  DisplayImage: Air Object
+  DisplayImage: 
   _solvingSFX: {fileID: 8300000, guid: 82d6d1df214bf3c409e149eecb00c97e, type: 3}
-  _powerSFX: {fileID: 8300000, guid: 82c1b27aad3947e499b0f74a4c976445, type: 3}
+  _powderSFX: {fileID: 0}
   _LiquidSFX: {fileID: 8300000, guid: 7e27f102b3bf25c4095d0d96a9c483b8, type: 3}
   ItemProperty: 0
   _dialog: I need to produce gas to open it.
@@ -3434,11 +3407,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 401047523}
+  - component: {fileID: 401047526}
   - component: {fileID: 401047525}
   - component: {fileID: 401047524}
-  - component: {fileID: 401047526}
   m_Layer: 0
-  m_Name: RedBoxClose
+  m_Name: RedBoxCloseView
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3731,7 +3704,7 @@ GameObject:
   - component: {fileID: 439580944}
   - component: {fileID: 439580945}
   m_Layer: 0
-  m_Name: Drawer1
+  m_Name: LeftDrawer
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3940,10 +3913,9 @@ GameObject:
   m_Component:
   - component: {fileID: 466938509}
   - component: {fileID: 466938512}
-  - component: {fileID: 466938511}
   - component: {fileID: 466938510}
   m_Layer: 0
-  m_Name: Code1 (5)
+  m_Name: Code2_3
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4014,32 +3986,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &466938511
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466938508}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.018290818, y: -0.036580414}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 1.21}
-    newSize: {x: 1.35, y: 1.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3292228, y: 1.365804}
-  m_EdgeRadius: 0
 --- !u!114 &466938512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4267,10 +4213,9 @@ GameObject:
   m_Component:
   - component: {fileID: 474980106}
   - component: {fileID: 474980108}
-  - component: {fileID: 474980107}
   - component: {fileID: 474980109}
   m_Layer: 0
-  m_Name: Code1 (1)
+  m_Name: Code1_2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4290,32 +4235,6 @@ Transform:
   m_Father: {fileID: 709563404}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &474980107
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474980105}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.018290281, y: 0.000000059604645}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 1.21}
-    newSize: {x: 1.35, y: 1.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3292248, y: 1.3658046}
-  m_EdgeRadius: 0
 --- !u!114 &474980108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4659,7 +4578,7 @@ GameObject:
   - component: {fileID: 535073118}
   - component: {fileID: 535073117}
   m_Layer: 0
-  m_Name: CharButton (17)
+  m_Name: CharButton3_3_Minus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4827,7 +4746,7 @@ MonoBehaviour:
   DisplayImage: 
   _isTurnOff: 0
   ItemProperty: 0
-  _dialog: 
+  _dialog: This part of wall is suspicious.
 --- !u!212 &549482973
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4915,10 +4834,9 @@ GameObject:
   m_Component:
   - component: {fileID: 569151679}
   - component: {fileID: 569151682}
-  - component: {fileID: 569151681}
   - component: {fileID: 569151680}
   m_Layer: 0
-  m_Name: Code1 (12)
+  m_Name: Code3_4
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4989,32 +4907,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &569151681
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569151678}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.018290818, y: -0.036580414}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 1.21}
-    newSize: {x: 1.35, y: 1.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3292228, y: 1.365804}
-  m_EdgeRadius: 0
 --- !u!114 &569151682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5040,7 +4932,7 @@ GameObject:
   - component: {fileID: 573011568}
   - component: {fileID: 573011567}
   m_Layer: 0
-  m_Name: CharButton (25)
+  m_Name: CharButton4_3_Minus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5165,7 +5057,7 @@ GameObject:
   - component: {fileID: 573812740}
   - component: {fileID: 573812742}
   m_Layer: 0
-  m_Name: CharButton
+  m_Name: CharButton1_1_Plus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5574,10 +5466,9 @@ GameObject:
   m_Component:
   - component: {fileID: 635883152}
   - component: {fileID: 635883155}
-  - component: {fileID: 635883154}
   - component: {fileID: 635883153}
   m_Layer: 0
-  m_Name: Code1 (8)
+  m_Name: Code4_3
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5648,32 +5539,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &635883154
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635883151}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.018290818, y: -0.036580414}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 1.21}
-    newSize: {x: 1.35, y: 1.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3292228, y: 1.365804}
-  m_EdgeRadius: 0
 --- !u!114 &635883155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5845,7 +5710,7 @@ GameObject:
   - component: {fileID: 675277620}
   - component: {fileID: 675277619}
   m_Layer: 0
-  m_Name: Numbers3
+  m_Name: Number3
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5904,7 +5769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonSFX: {fileID: 8300000, guid: d956a20476abf9a40a628afa5a561e54, type: 3}
-  _eachNumber: 10
+  _symbolNumber: 10
 --- !u!212 &675277621
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6027,7 +5892,7 @@ GameObject:
   - component: {fileID: 715364791}
   - component: {fileID: 715364790}
   m_Layer: 0
-  m_Name: CharButton (21)
+  m_Name: CharButton4_1_Minus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6152,7 +6017,7 @@ GameObject:
   - component: {fileID: 732697446}
   - component: {fileID: 732697445}
   m_Layer: 0
-  m_Name: CharButton (13)
+  m_Name: CharButton3_1_Minus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6356,7 +6221,7 @@ GameObject:
   - component: {fileID: 741837601}
   - component: {fileID: 741837603}
   m_Layer: 0
-  m_Name: CharButton (2)
+  m_Name: CharButton1_2_Plus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6478,10 +6343,9 @@ GameObject:
   m_Component:
   - component: {fileID: 741993737}
   - component: {fileID: 741993739}
-  - component: {fileID: 741993738}
   - component: {fileID: 741993740}
   m_Layer: 0
-  m_Name: Code1
+  m_Name: Code1_1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6501,32 +6365,6 @@ Transform:
   m_Father: {fileID: 709563404}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &741993738
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741993736}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.00000047683716, y: -0.00000020861626}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 1.21}
-    newSize: {x: 1.35, y: 1.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3658044, y: 1.365804}
-  m_EdgeRadius: 0
 --- !u!114 &741993739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6600,10 +6438,9 @@ GameObject:
   m_Component:
   - component: {fileID: 749011699}
   - component: {fileID: 749011702}
-  - component: {fileID: 749011701}
   - component: {fileID: 749011700}
   m_Layer: 0
-  m_Name: Code1 (10)
+  m_Name: Code3_2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6674,32 +6511,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &749011701
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749011698}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.018290281, y: 0.000000059604645}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 1.21}
-    newSize: {x: 1.35, y: 1.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3292248, y: 1.3658046}
-  m_EdgeRadius: 0
 --- !u!114 &749011702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6768,7 +6579,7 @@ MonoBehaviour:
   _linkViewPoint: {fileID: 467052654}
   _solvingSFX: {fileID: 8300000, guid: 82d6d1df214bf3c409e149eecb00c97e, type: 3}
   _spriteName: Numbers
-  _numbers: 5
+  _numbers: 4
 --- !u!1 &764103990
 GameObject:
   m_ObjectHideFlags: 0
@@ -6876,7 +6687,7 @@ MonoBehaviour:
   DisplayImage: 
   _isTurnOff: 0
   ItemProperty: 0
-  _dialog: It seems I can insert something into it
+  _dialog: It seems I can insert something into it.
 --- !u!61 &764103994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6985,8 +6796,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1663739198}
   m_HandleRect: {fileID: 1663739197}
   m_Direction: 2
-  m_Value: 1.0000029
-  m_Size: 0.9499384
+  m_Value: 1
+  m_Size: 0.94993836
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7248,7 +7059,7 @@ GameObject:
   - component: {fileID: 782367163}
   - component: {fileID: 782367164}
   m_Layer: 0
-  m_Name: LaserBeam_1
+  m_Name: LaserBeam1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7332,7 +7143,7 @@ GameObject:
   - component: {fileID: 794529746}
   - component: {fileID: 794529748}
   m_Layer: 0
-  m_Name: CharButton (5)
+  m_Name: CharButton1_3_Minus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7457,7 +7268,7 @@ GameObject:
   - component: {fileID: 830194210}
   - component: {fileID: 830194209}
   m_Layer: 0
-  m_Name: CharButton (23)
+  m_Name: CharButton4_2_Minus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8320,7 +8131,7 @@ GameObject:
   - component: {fileID: 966607630}
   - component: {fileID: 966607629}
   m_Layer: 0
-  m_Name: CharButton (14)
+  m_Name: CharButton3_2_Plus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8568,10 +8379,9 @@ GameObject:
   m_Component:
   - component: {fileID: 989940294}
   - component: {fileID: 989940297}
-  - component: {fileID: 989940296}
   - component: {fileID: 989940295}
   m_Layer: 0
-  m_Name: Code1 (11)
+  m_Name: Code3_3
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8642,32 +8452,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &989940296
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989940293}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.018290818, y: -0.036580414}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 1.21}
-    newSize: {x: 1.35, y: 1.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3292228, y: 1.365804}
-  m_EdgeRadius: 0
 --- !u!114 &989940297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8761,10 +8545,9 @@ GameObject:
   m_Component:
   - component: {fileID: 999327516}
   - component: {fileID: 999327519}
-  - component: {fileID: 999327518}
   - component: {fileID: 999327517}
   m_Layer: 0
-  m_Name: Code1 (4)
+  m_Name: Code2_2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8835,32 +8618,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &999327518
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 999327515}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.018290281, y: 0.000000059604645}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 1.21}
-    newSize: {x: 1.35, y: 1.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3292248, y: 1.3658046}
-  m_EdgeRadius: 0
 --- !u!114 &999327519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8886,7 +8643,7 @@ GameObject:
   - component: {fileID: 1006933667}
   - component: {fileID: 1006933666}
   m_Layer: 0
-  m_Name: CharButton (11)
+  m_Name: CharButton2_3_Minus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9196,7 +8953,7 @@ GameObject:
   - component: {fileID: 1027672520}
   - component: {fileID: 1027672519}
   m_Layer: 5
-  m_Name: Pause Menu
+  m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9414,10 +9171,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1048189245}
   - component: {fileID: 1048189248}
-  - component: {fileID: 1048189247}
   - component: {fileID: 1048189246}
   m_Layer: 0
-  m_Name: Code1 (9)
+  m_Name: Code3_1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9488,32 +9244,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1048189247
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1048189244}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.00000047683716, y: -0.00000020861626}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 1.21}
-    newSize: {x: 1.35, y: 1.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3658044, y: 1.365804}
-  m_EdgeRadius: 0
 --- !u!114 &1048189248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9633,7 +9363,7 @@ MonoBehaviour:
   DisplayImage: 
   _isTurnOff: 0
   ItemProperty: 0
-  _dialog: It seems I can insert something into it
+  _dialog: It seems I can insert something into it.
 --- !u!61 &1070393812
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9671,7 +9401,7 @@ GameObject:
   - component: {fileID: 1078963898}
   - component: {fileID: 1078963899}
   m_Layer: 0
-  m_Name: LaserBeam_2
+  m_Name: LaserBeam2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9752,10 +9482,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1083121203}
   - component: {fileID: 1083121205}
-  - component: {fileID: 1083121204}
   - component: {fileID: 1083121206}
   m_Layer: 0
-  m_Name: Code1 (2)
+  m_Name: Code1_3
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9775,32 +9504,6 @@ Transform:
   m_Father: {fileID: 709563404}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1083121204
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083121202}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.018290818, y: -0.036580414}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 1.21}
-    newSize: {x: 1.35, y: 1.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3292228, y: 1.365804}
-  m_EdgeRadius: 0
 --- !u!114 &1083121205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9877,7 +9580,7 @@ GameObject:
   - component: {fileID: 1095696770}
   - component: {fileID: 1095696769}
   m_Layer: 0
-  m_Name: CharButton (7)
+  m_Name: CharButton2_1_Minus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10096,7 +9799,7 @@ MonoBehaviour:
   DisplayImage: 
   _isTurnOff: 0
   ItemProperty: 0
-  _dialog: It seems I can insert something into it
+  _dialog: It seems I can insert something into it.
 --- !u!61 &1113208320
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10161,7 +9864,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122250493}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -10188,7 +9891,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122250493}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.8773623, y: 0.8541052, z: 0}
+  m_LocalPosition: {x: -3.66, y: 0.8541052, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1405283856}
@@ -10417,10 +10120,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1138875128}
   - component: {fileID: 1138875131}
-  - component: {fileID: 1138875130}
   - component: {fileID: 1138875129}
   m_Layer: 0
-  m_Name: Code1 (7)
+  m_Name: Code4_2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10491,32 +10193,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1138875130
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138875127}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.018290281, y: 0.000000059604645}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 1.21}
-    newSize: {x: 1.35, y: 1.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3292248, y: 1.3658046}
-  m_EdgeRadius: 0
 --- !u!114 &1138875131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10542,7 +10218,7 @@ GameObject:
   - component: {fileID: 1145251143}
   - component: {fileID: 1145251142}
   m_Layer: 0
-  m_Name: CharButton (6)
+  m_Name: CharButton2_1_Plus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10664,10 +10340,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1146110354}
   - component: {fileID: 1146110357}
-  - component: {fileID: 1146110356}
   - component: {fileID: 1146110355}
   m_Layer: 0
-  m_Name: Code1 (6)
+  m_Name: Code4_1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10738,32 +10413,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1146110356
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146110353}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.00000047683716, y: -0.00000020861626}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 1.21}
-    newSize: {x: 1.35, y: 1.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3658044, y: 1.365804}
-  m_EdgeRadius: 0
 --- !u!114 &1146110357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10973,7 +10622,7 @@ GameObject:
   - component: {fileID: 1179946056}
   - component: {fileID: 1179946055}
   m_Layer: 0
-  m_Name: Portion3
+  m_Name: Potion3
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11099,7 +10748,7 @@ GameObject:
   - component: {fileID: 1197152706}
   - component: {fileID: 1197152705}
   m_Layer: 0
-  m_Name: Button (5)
+  m_Name: Button6
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11405,7 +11054,7 @@ GameObject:
   - component: {fileID: 1253603748}
   - component: {fileID: 1253603747}
   m_Layer: 5
-  m_Name: Resume Button
+  m_Name: ResumeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12042,7 +11691,7 @@ GameObject:
   - component: {fileID: 1351972993}
   - component: {fileID: 1351972994}
   m_Layer: 0
-  m_Name: FirePuzzleBoxLocked
+  m_Name: FirePuzzleBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12253,7 +11902,7 @@ GameObject:
   - component: {fileID: 1410337046}
   - component: {fileID: 1410337045}
   m_Layer: 0
-  m_Name: Button (4)
+  m_Name: Button5
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12693,7 +12342,7 @@ GameObject:
   - component: {fileID: 1462704424}
   - component: {fileID: 1462704423}
   m_Layer: 0
-  m_Name: CharButton (12)
+  m_Name: CharButton3_1_Plus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13026,7 +12675,7 @@ GameObject:
   - component: {fileID: 1504616798}
   - component: {fileID: 1504616797}
   m_Layer: 0
-  m_Name: CharButton (20)
+  m_Name: CharButton4_1_Plus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13241,7 +12890,7 @@ GameObject:
   - component: {fileID: 1519135213}
   - component: {fileID: 1519135212}
   m_Layer: 0
-  m_Name: Numbers2
+  m_Name: Number2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13300,7 +12949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonSFX: {fileID: 8300000, guid: d956a20476abf9a40a628afa5a561e54, type: 3}
-  _eachNumber: 10
+  _symbolNumber: 10
 --- !u!212 &1519135214
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13613,7 +13262,7 @@ MonoBehaviour:
   DisplayImage: 
   _solvedSFX: {fileID: 8300000, guid: 82d6d1df214bf3c409e149eecb00c97e, type: 3}
   ItemProperty: 0
-  _dialog: I need a solution to melt this thing.
+  _dialog: I need a solution to dissolve this thing.
 --- !u!1 &1537972506
 GameObject:
   m_ObjectHideFlags: 0
@@ -13627,7 +13276,7 @@ GameObject:
   - component: {fileID: 1537972509}
   - component: {fileID: 1537972508}
   m_Layer: 0
-  m_Name: Portion2
+  m_Name: Potion2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13753,7 +13402,7 @@ GameObject:
   - component: {fileID: 1539394379}
   - component: {fileID: 1539394378}
   m_Layer: 0
-  m_Name: CharButton (10)
+  m_Name: CharButton2_3_Plus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14085,7 +13734,7 @@ GameObject:
   - component: {fileID: 1587321344}
   - component: {fileID: 1587321343}
   m_Layer: 0
-  m_Name: Button (2)
+  m_Name: Button3
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14516,7 +14165,7 @@ GameObject:
   - component: {fileID: 1595972609}
   - component: {fileID: 1595972608}
   m_Layer: 0
-  m_Name: CharButton (22)
+  m_Name: CharButton4_2_Plus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14641,7 +14290,7 @@ GameObject:
   - component: {fileID: 1603451006}
   - component: {fileID: 1603451005}
   m_Layer: 0
-  m_Name: Button (8)
+  m_Name: Button9
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14916,7 +14565,7 @@ GameObject:
   - component: {fileID: 1645520664}
   - component: {fileID: 1645520663}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Button1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15208,7 +14857,7 @@ GameObject:
   - component: {fileID: 1698695791}
   - component: {fileID: 1698695793}
   m_Layer: 0
-  m_Name: Portion1
+  m_Name: Potion1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15518,7 +15167,7 @@ GameObject:
   - component: {fileID: 1733735158}
   - component: {fileID: 1733735160}
   m_Layer: 0
-  m_Name: CharButton (4)
+  m_Name: CharButton1_3_Plus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15884,7 +15533,7 @@ GameObject:
   - component: {fileID: 1800833921}
   - component: {fileID: 1800833920}
   m_Layer: 0
-  m_Name: CharButton (18)
+  m_Name: CharButton3_4_Plus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16129,7 +15778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonSFX: {fileID: 8300000, guid: d956a20476abf9a40a628afa5a561e54, type: 3}
-  _eachNumber: 6
+  _symbolNumber: 6
 --- !u!212 &1817672384
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16403,7 +16052,7 @@ GameObject:
   - component: {fileID: 1846347110}
   - component: {fileID: 1846347112}
   m_Layer: 0
-  m_Name: CharButton (1)
+  m_Name: CharButton1 _1_Minus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16597,8 +16246,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1592467749}
   m_HandleRect: {fileID: 1592467748}
   m_Direction: 0
-  m_Value: 0.00000010390026
-  m_Size: 0.6275331
+  m_Value: -0.00000010390022
+  m_Size: 0.627533
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16794,7 +16443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonSFX: {fileID: 8300000, guid: d956a20476abf9a40a628afa5a561e54, type: 3}
-  _eachNumber: 10
+  _symbolNumber: 10
 --- !u!212 &1878082161
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16859,7 +16508,7 @@ GameObject:
   - component: {fileID: 1896038283}
   - component: {fileID: 1896038282}
   m_Layer: 0
-  m_Name: CharButton (9)
+  m_Name: CharButton2_2_Minus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17068,7 +16717,7 @@ GameObject:
   - component: {fileID: 1906393369}
   - component: {fileID: 1906393368}
   m_Layer: 0
-  m_Name: Numbers4
+  m_Name: Number4
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17127,7 +16776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonSFX: {fileID: 8300000, guid: d956a20476abf9a40a628afa5a561e54, type: 3}
-  _eachNumber: 10
+  _symbolNumber: 10
 --- !u!212 &1906393370
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17674,7 +17323,7 @@ GameObject:
   - component: {fileID: 1964586992}
   - component: {fileID: 1964586991}
   m_Layer: 0
-  m_Name: CharButton (15)
+  m_Name: CharButton3_2_Minus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17799,7 +17448,7 @@ GameObject:
   - component: {fileID: 1965571263}
   - component: {fileID: 1965571262}
   m_Layer: 0
-  m_Name: CharButton (16)
+  m_Name: CharButton3_3_Plus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17998,7 +17647,7 @@ GameObject:
   - component: {fileID: 1970969187}
   - component: {fileID: 1970969188}
   m_Layer: 0
-  m_Name: Drawer2
+  m_Name: RightDrawer
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18139,7 +17788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonSFX: {fileID: 8300000, guid: d956a20476abf9a40a628afa5a561e54, type: 3}
-  _eachNumber: 6
+  _symbolNumber: 6
 --- !u!212 &1982215229
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18644,7 +18293,7 @@ MonoBehaviour:
   DisplayImage: 
   _isTurnOff: 0
   ItemProperty: 0
-  _dialog: It seems I can insert something into it
+  _dialog: It seems I can insert something into it.
 --- !u!61 &2109141687
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18764,7 +18413,7 @@ GameObject:
   - component: {fileID: 2114115005}
   - component: {fileID: 2114115006}
   m_Layer: 0
-  m_Name: LaserBeam_3
+  m_Name: LaserBeam3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18848,7 +18497,7 @@ GameObject:
   - component: {fileID: 2120622555}
   - component: {fileID: 2120622554}
   m_Layer: 0
-  m_Name: CharButton (24)
+  m_Name: CharButton4_3_Plus
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

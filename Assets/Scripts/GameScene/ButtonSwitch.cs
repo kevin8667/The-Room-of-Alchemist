@@ -79,6 +79,7 @@ public class ButtonSwitch : MonoBehaviour, IInteractable
         
     }
 
+    // overload depents on the number of affected button
     public void SwitchOther(int _bt1, int _bt2)
     {
         if(_buttonList[_bt1-1].GetComponent<ButtonSwitch>()._isChanged == false)

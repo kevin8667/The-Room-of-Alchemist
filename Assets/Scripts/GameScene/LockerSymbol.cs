@@ -6,7 +6,7 @@ public class LockerSymbol : MonoBehaviour, IInteractable
 {
     [SerializeField] AudioClip _buttonSFX;
 
-    [SerializeField] int _eachNumber;
+    [SerializeField] int _symbolNumber;
 
     public void Interact(ImageDisplay currentDisplay)
     {
@@ -17,7 +17,7 @@ public class LockerSymbol : MonoBehaviour, IInteractable
 
         transform.parent.GetComponent<SymbolLock>()._currentIndividualIndex[transform.GetSiblingIndex()]++;
 
-        if (transform.parent.GetComponent<SymbolLock>()._currentIndividualIndex[transform.GetSiblingIndex()] > _eachNumber-1)
+        if (transform.parent.GetComponent<SymbolLock>()._currentIndividualIndex[transform.GetSiblingIndex()] > _symbolNumber - 1)
             transform.parent.GetComponent<SymbolLock>()._currentIndividualIndex[transform.GetSiblingIndex()] = 0;
 
         this.gameObject.GetComponent<SpriteRenderer>().sprite =

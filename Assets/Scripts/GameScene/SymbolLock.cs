@@ -52,7 +52,7 @@ public class SymbolLock : MonoBehaviour
     {
         bool correct = true;
 
-        for (int i = 0; i < _numbers-1; i++)
+        for (int i = 0; i < _numbers; i++)
         {
             if (_correctCombination[i] != transform.GetChild(i).GetComponent<SpriteRenderer>().sprite.name.Substring(transform.GetChild(i).GetComponent<SpriteRenderer>().sprite.name.Length - 1)[0])
             {
@@ -78,7 +78,7 @@ public class SymbolLock : MonoBehaviour
 
             _lockerSprite.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + _unlockedSpriteName);
 
-            for (int i = 0; i < _numbers - 1; i++)
+            for (int i = 0; i < _numbers; i++)
             {
                 Destroy(transform.GetChild(i).gameObject);
             }

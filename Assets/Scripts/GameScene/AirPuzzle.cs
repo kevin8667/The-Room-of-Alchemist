@@ -22,7 +22,7 @@ public class AirPuzzle : MonoBehaviour, IInteractable
 
     public string DisplayImage;
 
-    [SerializeField] AudioClip _solvingSFX, _powerSFX, _LiquidSFX;
+    [SerializeField] AudioClip _solvingSFX, _powderSFX, _LiquidSFX;
 
     public property ItemProperty;
 
@@ -78,9 +78,9 @@ public class AirPuzzle : MonoBehaviour, IInteractable
                     case "Air Mineral":
                         if (_isLiquidAdded == false && _isMineralAdded == false)
                         {
-                            if (_powerSFX != null)
+                            if (_powderSFX != null)
                             {
-                                AudioHelper.PlayClip2D(_powerSFX, 1f);
+                                AudioHelper.PlayClip2D(_powderSFX, 1f);
                             }
                             _isMineralAdded = true;
                             GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/AirPuzzleBoxWithMineral");
